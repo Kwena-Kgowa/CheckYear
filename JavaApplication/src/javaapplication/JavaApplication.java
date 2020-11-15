@@ -17,9 +17,13 @@ public class JavaApplication {
      */
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        System.out.println("Enter year you were born > ");
+        System.out.print("Enter year you were born > ");
         int year = reader.nextInt();
-        System.out.println("Your are "+GetAge(year)+" years old");
+        int age = GetAge(year);
+        if(age<0)
+            System.out.println("This is an invlaid year");
+        else
+            System.out.println("You are "+age+" years old");
     }
     
     public static int GetAge(int year)
